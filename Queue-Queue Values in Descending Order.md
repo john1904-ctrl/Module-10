@@ -22,7 +22,29 @@ To write a Python program to:
 7. Print the updated list.
 
 ## 🧪 Program: 
+```
+import queue  
+q = queue.Queue() 
+for i in range(5):
+    q.put(input())
 
+n =  q.qsize()  
+for i in range(n):  
+    x = q.get()  
+    for j in range(n-1):  
+        y = q.get()  
+        if x < y :  
+            q.put(y)  
+        else:  
+            q.put(x)  
+            x = y     
+    q.put(x)  
+while (q.empty() == False):   
+    print(q.queue[0], end = " ")    
+    q.get()
+```
 ### Output:
+![image](https://github.com/user-attachments/assets/2ee4ce91-f0d3-464a-887a-c770377e993d)
 
 ## Result:
+Thus,the program is executed successfully
